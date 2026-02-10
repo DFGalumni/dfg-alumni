@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFG Alumni | Official</title>
+    <title>DFG Alumni | Official - Destined For Greatness</title>
+    <meta name="description" content="Official DFG Alumni apparel. High-quality streetwear for those destined for greatness. Join the list for the next drop.">
     <style>
-        body { background-color: #000; color: white; font-family: 'Helvetica', sans-serif; margin: 0; text-align: center; }
+        body { background-color: #000; color: white; font-family: 'Helvetica', sans-serif; margin: 0; text-align: center; scroll-behavior: smooth; }
         header { padding: 80px 20px; border-bottom: 1px solid #111; }
-        h1 { font-size: 3rem; letter-spacing: 10px; margin-bottom: 15px; }
+        h1 { font-size: 3rem; letter-spacing: 10px; margin-bottom: 15px; text-transform: uppercase; }
         
         /* THE VAIL QUOTE */
         .quote-box { padding: 50px 20px; background: #080808; border-bottom: 1px solid #111; }
@@ -16,19 +17,27 @@
 
         /* THE PRODUCT GRID */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 50px 20px; }
-        .card { background: #0a0a0a; padding: 15px; border-radius: 12px; border: 1px solid #222; }
+        .card { background: #0a0a0a; padding: 15px; border-radius: 12px; border: 1px solid #222; transition: 0.3s; }
+        .card:hover { border-color: #ff4500; transform: translateY(-5px); }
         .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid #1a1a1a; }
         .card h3 { font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-        .btn-soon { display: inline-block; background: white; color: black; padding: 10px 20px; font-weight: bold; border-radius: 4px; font-size: 0.8rem; text-decoration: none; }
+        .btn-soon { display: inline-block; background: white; color: black; padding: 10px 20px; font-weight: bold; border-radius: 4px; font-size: 0.8rem; text-decoration: none; cursor: default; }
+
+        /* SIZE GUIDE TABLE */
+        .size-guide { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #ccc; }
+        th, td { border: 1px solid #222; padding: 15px; text-align: center; }
+        th { color: #ff4500; text-transform: uppercase; }
 
         /* EMAIL SIGNUP */
         .signup-section { padding: 80px 20px; background: #ff4500; color: #000; margin-top: 40px; }
         .signup-section h2 { margin-top: 0; font-size: 2rem; letter-spacing: 2px; }
         .signup-section input { padding: 15px; width: 80%; max-width: 300px; border: none; border-radius: 5px; margin-bottom: 10px; outline: none; }
-        .signup-btn { background: #000; color: #fff; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .signup-btn { background: #000; color: #fff; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; transition: 0.2s; }
+        .signup-btn:hover { opacity: 0.8; }
 
-        footer { padding: 60px 20px; color: #444; font-size: 0.8rem; }
-        .social-btn { display: inline-block; border: 2px solid #ff4500; color: #ff4500; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        footer { padding: 60px 20px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+        .social-btn { display: inline-block; border: 2px solid #ff4500; color: #ff4500; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 20px 10px; transition: 0.3s; }
         .social-btn:hover { background: #ff4500; color: #000; }
     </style>
 </head>
@@ -40,7 +49,7 @@
 
     <div class="quote-box">
         <p class="vail-quote">
-            "Greatness is obtainable to those who make it there destination"
+            "Greatness is obtainable to those who make it **their** destination"
             <span class="vail-name">— VAIL</span>
         </p>
     </div>
@@ -63,39 +72,61 @@
             <h3>DFG Slim-Fit Joggers</h3>
             <span class="btn-soon">DROPPING SOON</span>
         </div>
-
-        <div class="card">
-            <img src="longsleeve.jpg" alt="DFG Longsleeve">
-            <h3>Essential Longsleeve</h3>
-            <span class="btn-soon">DROPPING SOON</span>
         </div>
 
-        <div class="card">
-            <img src="hat.jpg" alt="DFG Hat">
-            <h3>DFG Script Hat</h3>
-            <span class="btn-soon">DROPPING SOON</span>
-        </div>
+    <section class="size-guide">
+        <h2>SIZE GUIDE</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest (Inches)</th>
+                    <th>Waist (Inches)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Small</td>
+                    <td>34-36</td>
+                    <td>28-30</td>
+                </tr>
+                <tr>
+                    <td>Medium</td>
+                    <td>38-40</td>
+                    <td>32-34</td>
+                </tr>
+                <tr>
+                    <td>Large</td>
+                    <td>42-44</td>
+                    <td>36-38</td>
+                </tr>
+                <tr>
+                    <td>X-Large</td>
+                    <td>46-48</td>
+                    <td>40-42</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <div class="card">
-            <img src="t-shirt.jpg" alt="DFG Shirt">
-            <h3>Movement Tee</h3>
-            <span class="btn-soon">DROPPING SOON</span>
-        </div>
-    </div>
-
-    <div class="signup-section">
+    <div class="signup-section" id="signup">
         <h2>DON'T MISS THE DROP</h2>
         <p>Join the alumni list to get notified the second we go live.</p>
-        <form>
-            <input type="email" placeholder="Enter your email address" required>
+        
+        <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+            <input type="email" name="email" placeholder="Enter your email address" required>
             <button type="submit" class="signup-btn">NOTIFY ME</button>
         </form>
     </div>
 
-    <a href="https://instagram.com" class="social-btn">FOLLOW US ON INSTAGRAM</a>
+    <div style="margin-bottom: 40px;">
+        <a href="https://instagram.com" class="social-btn">FOLLOW ON INSTAGRAM</a>
+        <a href="mailto:support@dfgalumni.com" class="social-btn" style="border-color: #fff; color: #fff;">CONTACT SUPPORT</a>
+    </div>
 
     <footer>
-        &copy; 2018 DFG ALUMNI. DESTINED FOR GREATNESS.
+        &copy; 2018 DFG ALUMNI. DESTINED FOR GREATNESS.<br>
+        <p style="margin-top: 10px;">Privacy Policy | Terms of Service</p>
     </footer>
 
 </body>
