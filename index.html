@@ -8,281 +8,288 @@
         :root {
             --dfg-orange: #ff4500;
             --dfg-black: #050505;
-            --dfg-gray: #111111;
+            --dfg-gray: #121212;
+            --dfg-white: #ffffff;
         }
 
         body {
             background-color: var(--dfg-black);
-            color: white;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--dfg-white);
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
             margin: 0;
-            text-align: center;
+            overflow-x: hidden;
         }
 
-        /* TOP ANNOUNCEMENT */
-        .shipping-bar {
-            background: #fff;
-            color: #000;
-            padding: 12px;
-            font-size: 0.75rem;
+        /* DYNAMIC ANNOUNCEMENT */
+        .marquee {
+            background: var(--dfg-orange);
+            color: black;
+            padding: 10px 0;
             font-weight: 900;
-            letter-spacing: 3px;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            border-bottom: 2px solid white;
         }
 
+        /* CINEMATIC HERO */
         header {
-            padding: 100px 20px;
-            background: linear-gradient(to bottom, #000, var(--dfg-black));
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover;
+            border-bottom: 1px solid #222;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            letter-spacing: 18px;
+            font-size: clamp(3rem, 12vw, 6rem);
+            letter-spacing: 20px;
             margin: 0;
             font-weight: 900;
-            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+        }
+
+        .timer-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: 1px solid var(--dfg-orange);
+            margin-top: 30px;
         }
 
         .timer {
-            margin-top: 25px;
-            font-size: 1.3rem;
-            color: var(--dfg-orange);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
             font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
         }
 
-        .container {
-            padding: 80px 20px;
-            max-width: 1300px;
+        /* SECTION HEADERS */
+        .collection-header {
+            padding: 100px 20px 40px;
+            text-align: left;
+            max-width: 1200px;
             margin: auto;
         }
 
-        .section-label {
-            font-size: 2.5rem;
-            letter-spacing: 8px;
+        .collection-header h2 {
+            font-size: 4rem;
             text-transform: uppercase;
-            margin-bottom: 60px;
-            display: block;
-            position: relative;
+            margin: 0;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
         }
 
-        .section-label::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--dfg-orange);
-            margin: 15px auto 0;
+        .collection-header .sub {
+            color: var(--dfg-orange);
+            font-weight: bold;
+            letter-spacing: 5px;
         }
 
+        /* PRODUCT GRID */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 0 20px 100px;
+            max-width: 1400px;
+            margin: auto;
         }
 
         .product-card {
             background: var(--dfg-gray);
-            padding: 15px;
-            border-radius: 4px;
             position: relative;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid #222;
+            overflow: hidden;
+            border: 1px solid #1a1a1a;
+            transition: 0.5s ease;
         }
 
         .product-card:hover {
-            transform: scale(1.03);
             border-color: var(--dfg-orange);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 40px rgba(255, 69, 0, 0.15);
         }
 
         .product-card img {
             width: 100%;
-            height: auto;
-            border-radius: 2px;
-            filter: grayscale(20%);
+            transition: 0.8s ease;
         }
 
         .product-card:hover img {
-            filter: grayscale(0%);
+            transform: scale(1.05);
         }
 
-        .product-info h3 {
-            margin: 20px 0 15px;
-            letter-spacing: 2px;
-            font-size: 1rem;
-            text-transform: uppercase;
+        .overlay {
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* BADGES */
-        .badge {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            padding: 6px 14px;
-            font-size: 0.65rem;
+        .btn-buy {
+            background: white;
+            color: black;
+            padding: 12px 25px;
+            text-decoration: none;
             font-weight: 900;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            z-index: 10;
         }
-        .badge-summer { background: #fff; color: #000; }
-        .badge-soon { background: var(--dfg-orange); color: #fff; }
 
-        /* UPTOWN TRIBUTE SPOTLIGHT */
-        .tribute-box {
+        /* WINTER SPECIFIC STYLE */
+        .winter-section { background: #080808; position: relative; }
+        .winter-section .collection-header h2 { -webkit-text-stroke: 1px var(--dfg-orange); }
+
+        /* UPTOWN TRIBUTE SLIDE */
+        .uptown-tribute {
             background: #000;
-            padding: 100px 20px;
+            padding: 150px 20px;
+            text-align: center;
             border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
         }
 
-        .tribute-box h2 {
-            color: var(--dfg-orange);
+        .vail-quote {
             font-size: 2rem;
-            letter-spacing: 5px;
-            margin-bottom: 30px;
-        }
-
-        .tribute-text {
-            max-width: 700px;
-            margin: auto;
-            color: #888;
-            font-size: 1.1rem;
-            line-height: 1.8;
             font-style: italic;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.4;
         }
 
         /* SIZE GUIDE */
-        .size-section { padding: 100px 20px; background: #050505; }
-        table {
-            width: 100%;
-            max-width: 900px;
-            margin: 40px auto;
-            border-collapse: collapse;
-            color: #ccc;
-        }
-        th, td { padding: 20px; border: 1px solid #1a1a1a; text-align: center; }
-        th { color: var(--dfg-orange); text-transform: uppercase; letter-spacing: 2px; }
+        .size-container { padding: 100px 20px; max-width: 1000px; margin: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 50px; }
+        th, td { padding: 25px; border-bottom: 1px solid #222; text-align: left; }
+        th { color: var(--dfg-orange); text-transform: uppercase; }
 
-        /* FOOTER / SIGNUP */
-        .footer-signup {
+        /* FOOTER */
+        .footer-cta {
             background: var(--dfg-orange);
             color: black;
             padding: 100px 20px;
+            text-align: center;
         }
 
-        .footer-signup h2 { font-size: 2.5rem; letter-spacing: 5px; margin-bottom: 10px; }
-        .footer-signup input {
-            padding: 18px;
-            width: 100%;
-            max-width: 350px;
-            border: none;
-            outline: none;
+        .footer-cta h2 { font-size: 3rem; margin-top: 0; }
+
+        input[type="email"] {
+            background: transparent;
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
             font-weight: bold;
+            outline: none;
         }
 
-        .btn-main {
+        .notify-btn {
             background: black;
             color: white;
-            padding: 18px 45px;
+            padding: 22px 50px;
             border: none;
-            cursor: pointer;
             font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-left: -5px;
+            cursor: pointer;
         }
-
-        footer { padding: 60px 20px; background: #000; color: #444; font-size: 0.8rem; }
-        .social-link { color: #888; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .social-link:hover { color: var(--dfg-orange); }
     </style>
 </head>
 <body>
 
-<div class="shipping-bar">Free Shipping on all orders over $100 — DFG Alumni Official</div>
+<div class="marquee">Free Shipping over $100 • Destined For Greatness • Uptown Chicago • Official Alumni Drop</div>
 
 <header>
     <h1>DFG ALUMNI</h1>
-    <div class="timer" id="countdown"></div>
+    <div class="timer-box">
+        <div class="timer" id="countdown">LOADING DROP...</div>
+    </div>
 </header>
 
-<section class="container">
-    <h2 class="section-label">The Summer Drop</h2>
+<section>
+    <div class="collection-header">
+        <span class="sub">JUNE 2026</span>
+        <h2>The Summer Drop</h2>
+    </div>
+    
     <div class="grid">
         <div class="product-card">
-            <div class="badge badge-summer">Summer 26</div>
-            <img src="shorts-tshirt-set.jpg" alt="Shorts and Tee">
-            <h3>Legacy Shorts & Tee Set</h3>
+            <img src="shorts-tshirt-set.jpg" alt="Summer Set">
+            <div class="overlay">
+                <h3>Legacy Short Set</h3>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
         </div>
         <div class="product-card">
-            <div class="badge badge-summer">Summer 26</div>
             <img src="dfg-recovery-slides.jpg" alt="Slides">
-            <h3>Recovery Slides</h3>
+            <div class="overlay">
+                <h3>Recovery Slides</h3>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
         </div>
         <div class="product-card">
-            <div class="badge badge-summer">Summer 26</div>
             <img src="dfg-bucket-hat.png" alt="Bucket Hat">
-            <h3>Alumni Bucket Hat</h3>
+            <div class="overlay">
+                <h3>Bucket Hat</h3>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
         </div>
         <div class="product-card">
-            <div class="badge badge-summer">Summer 26</div>
             <img src="dfg-tank.jpg" alt="Tank Top">
-            <h3>Performance Tank</h3>
+            <div class="overlay">
+                <h3>Performance Tank</h3>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="container" style="background: #080808; border-top: 1px solid #111;">
-    <h2 class="section-label">Winter Collection</h2>
+<section class="winter-section">
+    <div class="collection-header">
+        <span class="sub">ELITE ALUMNI</span>
+        <h2>Winter Collection</h2>
+    </div>
+
     <div class="grid">
         <div class="product-card">
             <img src="varcity-jacket.jpg" alt="Varsity Jacket">
-            <h3>Elite Alumni Varsity</h3>
+            <div class="overlay">
+                <h3>Elite Varsity</h3>
+                <a href="#" class="btn-buy">View Detail</a>
+            </div>
         </div>
         <div class="product-card">
             <img src="set-2pc.jpg" alt="Sweatsuit">
-            <h3>2-Piece Signature Sweatsuit</h3>
+            <div class="overlay">
+                <h3>2pc Jogging Set</h3>
+                <a href="#" class="btn-buy">View Detail</a>
+            </div>
         </div>
         <div class="product-card">
-            <img src="dfg-boot.jpg" alt="Boots">
-            <h3>Custom Alumni Utility Boots</h3>
+            <img src="dfg-boot.jpg" alt="Timbs">
+            <div class="overlay">
+                <h3>Custom Alumni Timbs</h3>
+                <a href="#" class="btn-buy">View Detail</a>
+            </div>
         </div>
         <div class="product-card">
             <img src="hoodie-front.jpg" alt="Hoodie">
-            <h3>Wing Zip-Up Hoodie</h3>
-        </div>
-        <div class="product-card">
-            <img src="joggers.jpg" alt="Joggers">
-            <h3>DFG Slim Joggers</h3>
-        </div>
-        <div class="product-card">
-            <img src="longsleeve.jpg" alt="Longsleeve">
-            <h3>Essential Longsleeve</h3>
-        </div>
-        <div class="product-card">
-            <img src="t-shirt.jpg" alt="Tshirt">
-            <h3>Classic Alumni Tee</h3>
-        </div>
-        <div class="product-card">
-            <div class="badge badge-soon">Coming Soon</div>
-            <img src="hat.jpg" alt="Hat" style="opacity: 0.4;">
-            <h3>DFG Fitted Hat</h3>
+            <div class="overlay">
+                <h3>Zip-Up Hoodie</h3>
+                <a href="#" class="btn-buy">View Detail</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="tribute-box">
-    <h2>Uptown Built. Legacy Earned.</h2>
-    <div class="tribute-text">
-        "Greatness is obtainable to those who make it their destination" — VAIL<br><br>
-        The DFG Varsity Jacket is more than fashion; it’s a tribute to the resilience of Uptown Chicago. From the lakefront to the grind, we represent those who choose growth over excuses.
+<section class="uptown-tribute">
+    <div class="vail-quote">
+        "Greatness is obtainable to those who make it their destination" <br>
+        <span style="color: var(--dfg-orange); font-size: 1rem; font-style: normal; letter-spacing: 5px;">— VAIL</span>
     </div>
+    <p style="margin-top: 40px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
+        From Uptown Chicago to the world. Our Varsity Jacket isn't fashion; it's a badge of resilience. Alumni are those who survived the pressure.
+    </p>
 </section>
 
-<section class="size-section">
-    <h2 class="section-label">Size Guide</h2>
+<section class="size-container">
+    <h2 style="letter-spacing: 10px;">SIZE GUIDE</h2>
     <table>
         <thead>
             <tr><th>Size</th><th>Chest (In)</th><th>Waist (In)</th></tr>
@@ -298,30 +305,29 @@
     </table>
 </section>
 
-<section class="footer-signup">
-    <h2>STAY DESTINED</h2>
-    <p>Sign up for early access to the Summer '26 drop.</p>
-    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-        <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" required>
-        <button type="submit" class="btn-main">Join</button>
+<section class="footer-cta">
+    <h2>JOIN THE ALUMNI</h2>
+    <p>Get notified for the Summer '26 launch.</p>
+    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" style="margin-top: 40px;">
+        <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
+        <button type="submit" class="notify-btn">SECURE ACCESS</button>
     </form>
 </section>
 
 <footer>
-    <div style="margin-bottom: 30px;">
-        <a href="#" class="social-link">INSTAGRAM</a>
-        <a href="mailto:support@dfgalumni.com" class="social-link">SUPPORT</a>
+    <p>&copy; 2026 DFG ALUMNI. DESTINED FOR GREATNESS. UPTOWN BUILT.</p>
+    <div style="margin-top: 20px;">
+        <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Instagram</a>
+        <a href="mailto:support@dfgalumni.com" style="color: white; margin: 0 10px; text-decoration: none;">Support</a>
     </div>
-    &copy; 2026 DFG ALUMNI. DESTINED FOR GREATNESS.
 </footer>
 
 <script>
-// Target: June 21, 2026
-const launchDate = new Date("June 21, 2026 00:00:00").getTime();
+const summerLaunch = new Date("June 21, 2026 00:00:00").getTime();
 
 setInterval(function() {
     const now = new Date().getTime();
-    const diff = launchDate - now;
+    const diff = summerLaunch - now;
 
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -335,3 +341,4 @@ setInterval(function() {
 
 </body>
 </html>
+
