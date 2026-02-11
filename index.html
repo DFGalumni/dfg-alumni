@@ -3,334 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DFG Alumni | Official</title>
+<title>DFG Alumni</title>
 
 <style>
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Helvetica, sans-serif;
-    margin: 0;
-    text-align: center;
-}
-
-.announcement-bar {
-    background: #fff;
-    color: #000;
-    padding: 12px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  text-align: center;
 }
 
 header {
-    padding: 80px 20px;
-    border-bottom: 1px solid #111;
+  padding: 40px 20px;
+  background: black;
 }
 
 h1 {
-    font-size: 3rem;
-    letter-spacing: 8px;
+  font-size: 40px;
+  letter-spacing: 3px;
 }
 
-.countdown {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    color: #ff4500;
+.timer {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #aaa;
 }
 
-.section-title {
-    font-size: 2rem;
-    letter-spacing: 4px;
-    margin-top: 80px;
-    color: #ff4500;
+.section {
+  padding: 60px 20px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    padding: 60px 40px;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
 }
 
-.card {
-    background: #0a0a0a;
-    border-radius: 14px;
-    border: 1px solid #222;
-    overflow: hidden;
-    transition: 0.3s ease;
+.product img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.card:hover {
-    border-color: #ff4500;
-    transform: translateY(-6px);
+.product h3 {
+  margin-top: 10px;
+  font-weight: normal;
 }
 
-.card img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card h3 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.description {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.btn-soon {
-    display: inline-block;
-    margin-top: 15px;
-    background: #fff;
-    color: #000;
-    padding: 10px 25px;
-    font-weight: bold;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.story-section {
-    padding: 100px 20px;
-    background: #080808;
-    margin-top: 80px;
-}
-
-.story-section h2 {
-    color: #ff4500;
-    letter-spacing: 4px;
-}
-
-.story-section p {
-    max-width: 850px;
-    margin: 20px auto;
-    line-height: 1.9;
-    color: #ccc;
-    font-size: 1rem;
-}
-
-.signup-section {
-    padding: 100px 20px;
-    background: #ff4500;
-    color: #000;
-}
-
-.signup-section input {
-    padding: 15px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.signup-btn {
-    background: #000;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-footer {
-    padding: 60px 20px;
-    color: #444;
-    font-size: 0.8rem;
-}
-
-.social-btn {
-    display: inline-block;
-    border: 2px solid #ff4500;
-    color: #ff4500;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 20px 10px;
+.story {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  color: #ccc;
 }
 </style>
 </head>
 
 <body>
 
-<div class="announcement-bar">
-Summer Collection Drops June 21 2026
-</div>
-
 <header>
-<h1>DFG ALUMNI</h1>
-<div class="countdown" id="countdown"></div>
+  <h1>DFG ALUMNI</h1>
+  <div class="timer" id="countdown"></div>
 </header>
 
-<h2 class="section-title">Summer Collection</h2>
+<section class="section">
+  <h2>Collection</h2>
+  <div class="products">
 
-<div class="grid">
+    <div class="product">
+      <img src="hoodie-front.jpg">
+      <h3>Signature Hoodie</h3>
+    </div>
 
-<div class="card">
-<img src="shorts-tshirt-set.jpg">
-<div class="card-content">
-<h3>Legacy Summer Set</h3>
-<p class="description">Shorts and Tee designed for heat, movement and elevation.</p>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="joggers.jpg">
+      <h3>Joggers</h3>
+    </div>
 
-<div class="card">
-<img src="t-shirt.jpg">
-<div class="card-content">
-<h3>Movement Tee</h3>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="t-shirt.jpg">
+      <h3>Classic T-Shirt</h3>
+    </div>
 
-<div class="card">
-<img src="dfg-tank.jpg">
-<div class="card-content">
-<h3>Alumni Performance Tank</h3>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="longsleeve.jpg">
+      <h3>Long Sleeve</h3>
+    </div>
 
-<div class="card">
-<img src="dfg-recovery-slides.jpg">
-<div class="card-content">
-<h3>Alumni Recovery Slides</h3>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="dfg-tank.jpg">
+      <h3>Performance Tank</h3>
+    </div>
 
-<div class="card">
-<img src="longsleeve.jpg">
-<div class="card-content">
-<h3>DFG Longsleeve</h3>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="shorts-tshirt-set.jpg">
+      <h3>Short Set</h3>
+    </div>
 
-<div class="card">
-<img src="hat.jpg">
-<div class="card-content">
-<h3>DFG Script Hat</h3>
-<span class="btn-soon">June 21</span>
-</div>
-</div>
+    <div class="product">
+      <img src="set-2pc.jpg">
+      <h3>2 Piece Set</h3>
+    </div>
 
-</div>
+    <div class="product">
+      <img src="hat.jpg">
+      <h3>DFG Hat</h3>
+    </div>
 
-<h2 class="section-title">Winter Collection</h2>
+    <div class="product">
+      <img src="dfg-boot.jpg">
+      <h3>DFG Boot</h3>
+    </div>
 
-<div class="grid">
+    <div class="product">
+      <img src="dfg-recovery-slides.jpg">
+      <h3>Recovery Slides</h3>
+    </div>
 
-<div class="card">
-<img src="set-2pc.jpg">
-<div class="card-content">
-<h3>Signature 2 Piece Sweatsuit</h3>
-<span class="btn-soon">Winter 2026</span>
-</div>
-</div>
+    <div class="product">
+      <img src="varcity-jacket.jpg">
+      <h3>Varsity Jacket</h3>
+    </div>
 
-<div class="card">
-<img src="joggers.jpg">
-<div class="card-content">
-<h3>DFG Slim Fit Joggers</h3>
-<span class="btn-soon">Winter 2026</span>
-</div>
-</div>
-
-<div class="card">
-<img src="varcity-jacket.jpg">
-<div class="card-content">
-<h3>Elite Alumni Uptown Varsity Jacket</h3>
-<span class="btn-soon">Winter 2026</span>
-</div>
-</div>
-
-<div class="card">
-<img src="dfg-boot.jpg">
-<div class="card-content">
-<h3>Greatness Custom Timberlands</h3>
-<span class="btn-soon">Winter 2026</span>
-</div>
-</div>
-
-<div class="card">
-<img src="hoodie-front.jpg">
-<div class="card-content">
-<h3>Wings Up Hoodie</h3>
-<span class="btn-soon">Winter 2026</span>
-</div>
-</div>
-
-</div>
-
-<section class="story-section">
-<h2>The Uptown Story</h2>
-
-<p>
-The Elite Alumni Uptown Varsity Jacket is a tribute to Uptown Chicago. A neighborhood rooted in culture, resilience and diversity.
-</p>
-
-<p>
-Uptown is where ambition is sharpened. Where music, struggle, art and hustle exist on the same block. Where greatness is forged through pressure and persistence.
-</p>
-
-<p>
-This jacket represents identity, loyalty and elevation. It represents where the mindset was built.
-</p>
-
-<p>
-From Uptown to the world.
-</p>
-
+  </div>
 </section>
 
-<div class="signup-section">
-<h2>Do Not Miss The Drop</h2>
-<form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-<input type="email" name="email" placeholder="Enter your email address" required>
-<br>
-<button type="submit" class="signup-btn">Notify Me</button>
-</form>
-</div>
+<section class="section">
+  <h2>The Varsity Jacket Story</h2>
+  <div class="story">
+    The DFG Varsity Jacket represents earned respect. Not given. Not borrowed. Earned.
 
-<div>
-<a href="https://instagram.com" class="social-btn">Follow On Instagram</a>
-<a href="mailto:support@dfgalumni.com" class="social-btn">Contact Support</a>
-</div>
+    It stands for discipline, loyalty, and elevation. The Alumni are those who survived the pressure and chose growth over excuses.
 
-<footer>
-© 2026 DFG Alumni. Destined For Greatness.
-</footer>
+    This jacket is not about fashion. It is about legacy.
+  </div>
+</section>
+
+<section class="section">
+  <h2>Uptown Chicago</h2>
+  <div class="story">
+    Uptown is history. Uptown is culture. Uptown is resilience.
+
+    From the lakefront to the music halls, from the grind to the glow up, it is a place where people learn early that nothing is handed to you.
+
+    DFG Alumni was built with that same mentality. Pressure creates diamonds. Adversity creates alumni.
+  </div>
+</section>
 
 <script>
-var countDownDate = new Date("June 21, 2026 00:00:00").getTime();
+var countDownDate = new Date("March 1, 2026 00:00:00").getTime();
+
 var x = setInterval(function() {
-var now = new Date().getTime();
-var distance = countDownDate - now;
 
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
 
-document.getElementById("countdown").innerHTML =
-days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ";
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-if (distance < 0) {
-clearInterval(x);
-document.getElementById("countdown").innerHTML = "Now Live";
-}
+  document.getElementById("countdown").innerHTML =
+  "Next Drop In: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
 }, 1000);
 </script>
 
