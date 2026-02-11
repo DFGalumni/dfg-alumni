@@ -6,56 +6,77 @@
 <title>DFG Alumni</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0a0a0a;
-  color: white;
-  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
 }
 
 header {
-  padding: 40px 20px;
-  background: black;
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+  background: #000000;
 }
 
 h1 {
-  font-size: 40px;
-  letter-spacing: 3px;
+  font-size: 42px;
+  letter-spacing: 4px;
+  margin: 0;
 }
 
 .timer {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #aaa;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #aaaaaa;
 }
 
 .section {
   padding: 60px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.product {
+  text-align: center;
 }
 
 .product img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .product h3 {
-  margin-top: 10px;
-  font-weight: normal;
+  margin-top: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .story {
   max-width: 800px;
   margin: auto;
-  line-height: 1.6;
-  color: #ccc;
+  line-height: 1.8;
+  color: #cccccc;
+  text-align: center;
 }
 </style>
 </head>
@@ -69,60 +90,61 @@ h1 {
 
 <section class="section">
   <h2>Collection</h2>
+
   <div class="products">
 
     <div class="product">
-      <img src="hoodie-front.jpg">
+      <img src="./hoodie-front.jpg" alt="Signature Hoodie">
       <h3>Signature Hoodie</h3>
     </div>
 
     <div class="product">
-      <img src="joggers.jpg">
+      <img src="./joggers.jpg" alt="Joggers">
       <h3>Joggers</h3>
     </div>
 
     <div class="product">
-      <img src="t-shirt.jpg">
+      <img src="./t-shirt.jpg" alt="Classic T-Shirt">
       <h3>Classic T-Shirt</h3>
     </div>
 
     <div class="product">
-      <img src="longsleeve.jpg">
+      <img src="./longsleeve.jpg" alt="Long Sleeve">
       <h3>Long Sleeve</h3>
     </div>
 
     <div class="product">
-      <img src="dfg-tank.jpg">
+      <img src="./dfg-tank.jpg" alt="Performance Tank">
       <h3>Performance Tank</h3>
     </div>
 
     <div class="product">
-      <img src="shorts-tshirt-set.jpg">
+      <img src="./shorts-tshirt-set.jpg" alt="Short Set">
       <h3>Short Set</h3>
     </div>
 
     <div class="product">
-      <img src="set-2pc.jpg">
+      <img src="./set-2pc.jpg" alt="2 Piece Set">
       <h3>2 Piece Set</h3>
     </div>
 
     <div class="product">
-      <img src="hat.jpg">
+      <img src="./hat.jpg" alt="DFG Hat">
       <h3>DFG Hat</h3>
     </div>
 
     <div class="product">
-      <img src="dfg-boot.jpg">
+      <img src="./dfg-boot.jpg" alt="DFG Boot">
       <h3>DFG Boot</h3>
     </div>
 
     <div class="product">
-      <img src="dfg-recovery-slides.jpg">
+      <img src="./dfg-recovery-slides.jpg" alt="Recovery Slides">
       <h3>Recovery Slides</h3>
     </div>
 
     <div class="product">
-      <img src="varcity-jacket.jpg">
+      <img src="./varcity-jacket.jpg" alt="Varsity Jacket">
       <h3>Varsity Jacket</h3>
     </div>
 
@@ -130,44 +152,37 @@ h1 {
 </section>
 
 <section class="section">
-  <h2>The Varsity Jacket Story</h2>
+  <h2>The Varsity Jacket</h2>
   <div class="story">
-    The DFG Varsity Jacket represents earned respect. Not given. Not borrowed. Earned.
-
-    It stands for discipline, loyalty, and elevation. The Alumni are those who survived the pressure and chose growth over excuses.
-
-    This jacket is not about fashion. It is about legacy.
+    The DFG Varsity Jacket represents earned respect. It symbolizes discipline, elevation, and the journey from pressure to purpose. Alumni are those who survived the environment and chose growth over excuses. This jacket is not fashion. It is legacy.
   </div>
 </section>
 
 <section class="section">
   <h2>Uptown Chicago</h2>
   <div class="story">
-    Uptown is history. Uptown is culture. Uptown is resilience.
-
-    From the lakefront to the music halls, from the grind to the glow up, it is a place where people learn early that nothing is handed to you.
-
-    DFG Alumni was built with that same mentality. Pressure creates diamonds. Adversity creates alumni.
+    Uptown is history, culture, resilience, and survival. From the lakefront to the late nights, from struggle to elevation, it shapes individuals who understand that nothing is handed to you. DFG Alumni was built from that mentality. Pressure creates diamonds. Adversity creates alumni.
   </div>
 </section>
 
 <script>
-var countDownDate = new Date("March 1, 2026 00:00:00").getTime();
+const dropDate = new Date("March 1, 2026 00:00:00").getTime();
 
-var x = setInterval(function() {
+setInterval(function() {
+  const now = new Date().getTime();
+  const distance = dropDate - now;
 
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("countdown").innerHTML =
-  "Next Drop In: " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
+    "Next Drop In: " +
+    days + "d " +
+    hours + "h " +
+    minutes + "m " +
+    seconds + "s ";
 }, 1000);
 </script>
 
