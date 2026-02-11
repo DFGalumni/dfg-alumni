@@ -6,63 +6,166 @@
 <title>DFG Alumni | Official</title>
 
 <style>
-body { background-color: #000; color: white; font-family: 'Helvetica', sans-serif; margin: 0; text-align: center; }
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
+}
 
-.announcement-bar { background: #fff; color: #000; padding: 10px; font-size: 0.8rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+.announcement-bar {
+    background: #fff;
+    color: #000;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-header { padding: 60px 20px; border-bottom: 1px solid #111; }
-h1 { font-size: 3rem; letter-spacing: 10px; margin-bottom: 15px; }
+header {
+    padding: 80px 20px;
+    border-bottom: 1px solid #111;
+}
 
-.quote-box { padding: 50px 20px; background: #080808; border-bottom: 1px solid #111; }
+h1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+}
 
-.section-title { font-size: 2rem; letter-spacing: 4px; margin-top: 60px; color: #ff4500; }
+.countdown {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #ff4500;
+}
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 50px 20px; }
+.section-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-top: 80px;
+    color: #ff4500;
+}
 
-.card { background: #0a0a0a; padding: 15px; border-radius: 12px; border: 1px solid #222; transition: 0.3s; position: relative; }
-.card:hover { border-color: #ff4500; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 60px 40px;
+}
 
-.card img { width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid #1a1a1a; }
+.card {
+    background: #0a0a0a;
+    border-radius: 14px;
+    border: 1px solid #222;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
 
-.card h3 { font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+.card:hover {
+    border-color: #ff4500;
+    transform: translateY(-6px);
+}
 
-.description { font-size: 0.85rem; color: #aaa; margin-top: 5px; }
+.card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
 
-.btn-soon { display: inline-block; background: white; color: black; padding: 10px 20px; font-weight: bold; border-radius: 4px; font-size: 0.8rem; text-decoration: none; }
+.card-content {
+    padding: 20px;
+}
 
-.badge { position: absolute; top: 25px; left: 25px; background: #ff4500; color: #000; padding: 5px 12px; font-size: 0.7rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; }
+.card h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
 
-/* COUNTDOWN */
-.countdown { font-size: 1.5rem; margin-top: 20px; letter-spacing: 3px; }
+.description {
+    font-size: 0.9rem;
+    color: #aaa;
+}
 
-/* VARSITY STORY SECTION */
-.story-section { padding: 80px 20px; background: #080808; border-top: 1px solid #111; border-bottom: 1px solid #111; }
-.story-section h2 { color: #ff4500; letter-spacing: 4px; }
-.story-section p { max-width: 800px; margin: 20px auto; line-height: 1.8; color: #ccc; font-size: 1rem; }
+.btn-soon {
+    display: inline-block;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
 
-.size-guide { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
+.story-section {
+    padding: 100px 20px;
+    background: #080808;
+    margin-top: 80px;
+}
 
-table { width: 100%; border-collapse: collapse; color: #ccc; margin-top: 20px; }
-th, td { border: 1px solid #222; padding: 15px; text-align: center; }
-th { color: #ff4500; }
+.story-section h2 {
+    color: #ff4500;
+    letter-spacing: 4px;
+}
 
-.signup-section { padding: 80px 20px; background: #ff4500; color: #000; margin-top: 40px; }
+.story-section p {
+    max-width: 850px;
+    margin: 20px auto;
+    line-height: 1.9;
+    color: #ccc;
+    font-size: 1rem;
+}
 
-.signup-section input { padding: 15px; width: 80%; max-width: 300px; border: none; border-radius: 5px; margin-bottom: 10px; outline: none; }
+.signup-section {
+    padding: 100px 20px;
+    background: #ff4500;
+    color: #000;
+}
 
-.signup-btn { background: #000; color: #fff; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.signup-section input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-footer { padding: 60px 20px; color: #444; font-size: 0.8rem; }
+.signup-btn {
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-.social-btn { display: inline-block; border: 2px solid #ff4500; color: #ff4500; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 20px 10px; transition: 0.3s; }
-.social-btn:hover { background: #ff4500; color: #000; }
+footer {
+    padding: 60px 20px;
+    color: #444;
+    font-size: 0.8rem;
+}
+
+.social-btn {
+    display: inline-block;
+    border: 2px solid #ff4500;
+    color: #ff4500;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 10px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="announcement-bar">
-SUMMER COLLECTION DROPS FIRST DAY OF SUMMER 2026
+Summer Collection Drops June 21 2026
 </div>
 
 <header>
@@ -70,124 +173,148 @@ SUMMER COLLECTION DROPS FIRST DAY OF SUMMER 2026
 <div class="countdown" id="countdown"></div>
 </header>
 
-<div class="quote-box">
-<p style="font-style: italic; font-size: 1.5rem;">
-"Greatness is obtainable to those who make it their destination"
-<br><span style="color:#ff4500;">— VAIL</span>
-</p>
-</div>
-
-<h2 class="section-title">SUMMER DROP ☀️</h2>
+<h2 class="section-title">Summer Collection</h2>
 
 <div class="grid">
+
 <div class="card">
-<img src="summer-set.jpg">
+<img src="shorts-tshirt-set.jpg">
+<div class="card-content">
 <h3>Legacy Summer Set</h3>
-<p class="description">Built for heat. Built for movement. Built for greatness.</p>
-<span class="btn-soon">DROPS JUNE 21</span>
+<p class="description">Shorts and Tee designed for heat, movement and elevation.</p>
+<span class="btn-soon">June 21</span>
+</div>
 </div>
 
 <div class="card">
-<img src="movement-tee.jpg">
+<img src="t-shirt.jpg">
+<div class="card-content">
 <h3>Movement Tee</h3>
-<span class="btn-soon">DROPS JUNE 21</span>
+<span class="btn-soon">June 21</span>
+</div>
 </div>
 
 <div class="card">
-<img src="tank.jpg">
+<img src="dfg-tank.jpg">
+<div class="card-content">
 <h3>Alumni Performance Tank</h3>
-<span class="btn-soon">DROPS JUNE 21</span>
+<span class="btn-soon">June 21</span>
+</div>
 </div>
 
 <div class="card">
-<img src="slides.jpg">
+<img src="dfg-recovery-slides.jpg">
+<div class="card-content">
 <h3>Alumni Recovery Slides</h3>
-<span class="btn-soon">DROPS JUNE 21</span>
+<span class="btn-soon">June 21</span>
 </div>
 </div>
 
-<h2 class="section-title">WINTER COLLECTION ❄️</h2>
+<div class="card">
+<img src="longsleeve.jpg">
+<div class="card-content">
+<h3>DFG Longsleeve</h3>
+<span class="btn-soon">June 21</span>
+</div>
+</div>
+
+<div class="card">
+<img src="hat.jpg">
+<div class="card-content">
+<h3>DFG Script Hat</h3>
+<span class="btn-soon">June 21</span>
+</div>
+</div>
+
+</div>
+
+<h2 class="section-title">Winter Collection</h2>
 
 <div class="grid">
+
 <div class="card">
-<div class="badge">Limited</div>
-<img src="jogging-set.jpg">
-<h3>Signature 2-Piece Sweatsuit</h3>
-<span class="btn-soon">WINTER 2026</span>
+<img src="set-2pc.jpg">
+<div class="card-content">
+<h3>Signature 2 Piece Sweatsuit</h3>
+<span class="btn-soon">Winter 2026</span>
+</div>
 </div>
 
 <div class="card">
-<div class="badge">Uptown Tribute</div>
-<img src="varsity.jpg">
+<img src="joggers.jpg">
+<div class="card-content">
+<h3>DFG Slim Fit Joggers</h3>
+<span class="btn-soon">Winter 2026</span>
+</div>
+</div>
+
+<div class="card">
+<img src="varcity-jacket.jpg">
+<div class="card-content">
 <h3>Elite Alumni Uptown Varsity Jacket</h3>
-<span class="btn-soon">WINTER 2026</span>
+<span class="btn-soon">Winter 2026</span>
+</div>
 </div>
 
 <div class="card">
-<img src="timbs.jpg">
+<img src="dfg-boot.jpg">
+<div class="card-content">
 <h3>Greatness Custom Timberlands</h3>
-<span class="btn-soon">WINTER 2026</span>
+<span class="btn-soon">Winter 2026</span>
 </div>
 </div>
 
-<!-- VARSITY STORY -->
+<div class="card">
+<img src="hoodie-front.jpg">
+<div class="card-content">
+<h3>Wings Up Hoodie</h3>
+<span class="btn-soon">Winter 2026</span>
+</div>
+</div>
+
+</div>
+
 <section class="story-section">
-<h2>THE UPTOWN STORY</h2>
-<p>
-The Elite Alumni Uptown Varsity Jacket isn’t just outerwear — it’s history stitched into fabric.
-</p>
-<p>
-Born from Uptown Chicago — a neighborhood built on culture, resilience, diversity, and survival. 
-From the music, to the grind, to the everyday dreamers trying to make something out of nothing — 
-Uptown doesn’t just raise people. It builds pressure into diamonds.
-</p>
-<p>
-This jacket represents where greatness was shaped.  
-Where ambition had to fight for space.  
-Where loyalty meant something.  
-Where we learned that being different was power.
-</p>
-<p>
-This is for Uptown.  
-This is for Chicago.  
-This is for anyone who came from somewhere and decided they were going somewhere greater.
-</p>
-</section>
+<h2>The Uptown Story</h2>
 
-<section class="size-guide">
-<h2>SIZE GUIDE</h2>
-<table>
-<tr><th>Size</th><th>Chest</th><th>Waist</th></tr>
-<tr><td>S</td><td>34-36</td><td>28-30</td></tr>
-<tr><td>M</td><td>38-40</td><td>32-34</td></tr>
-<tr><td>L</td><td>42-44</td><td>36-38</td></tr>
-<tr><td>XL</td><td>46-48</td><td>40-42</td></tr>
-<tr><td>2XL</td><td>50-52</td><td>44-46</td></tr>
-</table>
+<p>
+The Elite Alumni Uptown Varsity Jacket is a tribute to Uptown Chicago. A neighborhood rooted in culture, resilience and diversity.
+</p>
+
+<p>
+Uptown is where ambition is sharpened. Where music, struggle, art and hustle exist on the same block. Where greatness is forged through pressure and persistence.
+</p>
+
+<p>
+This jacket represents identity, loyalty and elevation. It represents where the mindset was built.
+</p>
+
+<p>
+From Uptown to the world.
+</p>
+
 </section>
 
 <div class="signup-section">
-<h2>DON'T MISS THE DROP</h2>
-<p>Join the Alumni list and be first when Summer goes live.</p>
+<h2>Do Not Miss The Drop</h2>
 <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
 <input type="email" name="email" placeholder="Enter your email address" required>
-<button type="submit" class="signup-btn">NOTIFY ME</button>
+<br>
+<button type="submit" class="signup-btn">Notify Me</button>
 </form>
 </div>
 
 <div>
-<a href="https://instagram.com" class="social-btn">FOLLOW US ON INSTAGRAM</a>
-<a href="mailto:support@dfgalumni.com" class="social-btn" style="border-color:#fff;color:#fff;">CONTACT SUPPORT</a>
+<a href="https://instagram.com" class="social-btn">Follow On Instagram</a>
+<a href="mailto:support@dfgalumni.com" class="social-btn">Contact Support</a>
 </div>
 
 <footer>
-&copy; 2026 DFG ALUMNI. DESTINED FOR GREATNESS.
+© 2026 DFG Alumni. Destined For Greatness.
 </footer>
 
 <script>
-// COUNTDOWN TIMER TO JUNE 21, 2026
 var countDownDate = new Date("June 21, 2026 00:00:00").getTime();
-
 var x = setInterval(function() {
 var now = new Date().getTime();
 var distance = countDownDate - now;
@@ -198,11 +325,11 @@ var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 document.getElementById("countdown").innerHTML =
-days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ";
 
 if (distance < 0) {
 clearInterval(x);
-document.getElementById("countdown").innerHTML = "WE ARE LIVE";
+document.getElementById("countdown").innerHTML = "Now Live";
 }
 }, 1000);
 </script>
